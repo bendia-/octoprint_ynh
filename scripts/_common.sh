@@ -277,7 +277,7 @@ ynh_check_starting () {
 	ynh_handle_getopts_args "$@"
 	local app_log="${app_log:-/var/log/$service_name/$service_name.log}"
 	local timeout=${timeout:-300}
-	local service_name="${service_name:-$app}"
+	local service_name="${service_name:-$app}.service"
 
 	echo "Starting of $service_name" >&2
 	systemctl stop $service_name
